@@ -12,7 +12,7 @@ const app = express();
 app.use(express.json());
 app.use(urlencoded({extended:true}));
 app.get('/',(req,res)=>res.json({success:true}));
-app.use(blogRouter);
+app.use("/api",blogRouter);
 const server = app.listen(4000,()=>{
     console.log("Listening At Port",4000);
 })
